@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página</title>
+</head>
+<body>
+    <header>
+        <h1>¿Quién soy yo?</h1>
+        <p style="font-size: 13px;">Presentado por Juan Pablo Cabrera <br> Matrícula: A01661090 <br>
+        <a href="https://github.com/JP-coder2000" style="font-size:13px">Link de Github</a>
+        </p>
+
+    </header>
+    <div>
+        <p>
+        Mi nombre es Juan Pablo Cabrera, soy actualmente alumno del Tecnológico de Monterrey, tengo 20 años y hasta hace unos años estaba perdido. <br>
+        Yo no tenía ni idea de lo que iba a hacer con mi vida o con la vida en general, hasta que un día un profesor me invitó a una conferencia de programación, y desde ahí supe que tenía que estudiar eso (aunque no supiera absolutamente nada), pero creo que lo estoy haciendo lo mejor que puedo y siento que cada vez me vuelvo mejor.
+        </p>
+        <p>
+            En cuanto a mi persona en partícular, soy una persona calmada, que me gusta dicertirme y hacer mucho deporte.
+        </p>
+    </div>
+    <hr>
+    <strong>Pregutnas de laboratorio...</strong>
+    <ol>
+        <li><details>
+        <summary>¿Cuál es la diferencia entre Internet y la World Wide Web? </summary>
+        <p>El internet es la infraestructura que conecta los dispositivos y les permite comunicarse, mientras que la World Wide Web (WWW) es un servicio que corre en el internet y otorga información y herramientas.</p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Cuáles son las partes de un URL?</summary>
+        <p>
+            Las partes principales de un URL son:<br><br>
+            1. Protocolo: El protocolo utilizado para acceder al recurso, como HTTP o HTTPS. <br>
+            2. Nombre de dominio: El nombre de dominio de la página web. <br>
+            3. Puerto: El número de puerto utilizado para acceder al recurso. Por lo general, el puerto por defecto para HTTP es el 80 y para HTTPS es el 443.<br>
+            4. Ruta: La ruta o la ubicación del archivo o recurso dentro del servidor.<br>
+            5. Parámetros: Los parámetros adicionales que se utilizan para identificar o filtrar el contenido, separados por signos de interrogación y ampersand.<br>
+            6. Fragmento: El identificador del fragmento de la página web, separado por un signo de almohadilla.<br><br>
+            Cabe señalar que no todas las partes son necesarias en todas las URL, y algunas partes pueden ser opcionales o estar ausentes dependiendo de la página web y la forma en que se acceda a ella.</p>
+        </details></li>
+
+
+        <li><details>
+        <summary>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</summary>
+        <p>
+            Los métodos HTTP se utilizan para indicar la acción que se debe realizar en un recurso web. El propósito de cada uno es el siguiente: <br><br>
+            <ol>
+                <li>GET: Solicita una representación del recurso especificado. No debe tener ningún efecto secundario.</li>
+                <li>HEAD: Solicita la misma respuesta que GET, pero sin el cuerpo de la respuesta.</li>
+                <li>POST: Envía datos para que el recurso los procese. Puede tener un efecto secundario, como crear un nuevo recurso o actualizar uno existente.</li>
+                <li>PUT: Reemplaza completamente el recurso especificado con los datos enviados. Si el recurso no existe, se puede crear uno nuevo.</li>
+                <li>PATCH: Modifica parcialmente el recurso especificado con los datos enviados.</li>
+                <li>DELETE: Elimina el recurso especificado.</li>
+            </ol>
+        </p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</summary>
+        <p>
+            El método HTTP que se debe utilizar al enviar un formulario HTML que contiene información sensible, como un nombre de usuario y una contraseña, es el método POST.<br>
+
+            Esto se debe a que el método POST envía los datos del formulario en el cuerpo de la solicitud HTTP, lo que los hace menos visibles y menos propensos a ser interceptados por un tercero.<br> Además, el método POST no almacena los datos enviados en el historial del navegador, lo que ayuda a mantener la privacidad y la seguridad del usuario.
+        </p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</summary>
+        <p>Cuando se accede a una página a través de un URL en un navegador web, se utiliza el método HTTP GET por defecto.</p>
+        </details></li>
+
+        <li><details>
+        <summary>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</summary>
+        <p>
+            Un servidor web que devuelve una respuesta HTTP con código 200 significa que la solicitud HTTP fue exitosa y que el servidor ha devuelto correctamente el recurso solicitado.<br>
+
+            El código de respuesta HTTP 200 se conoce como "OK" y se utiliza para indicar que la solicitud ha sido procesada correctamente por el servidor y que se ha devuelto una respuesta exitosa al cliente.
+            
+            </p>
+        </details></li>
+        
+        <li><details>
+        <summary>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</summary>
+        <p>Sí, el error 404 es una respuesta HTTP que indica que el servidor no ha encontrado el recurso solicitado. Esto puede ocurrir si se ha eliminado o movido una página, o si se ha cambiado la estructura del sitio web sin actualizar los enlaces correspondientes.</p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</summary>
+        <p>Sí, El error 500 es una respuesta HTTP que indica que se ha producido un error interno en el servidor, lo que puede deberse a una variedad de problemas, como errores de programación, problemas de configuración del servidor, errores en la base de datos, entre otros.
+
+        </p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</summary>
+        <p>
+            Un atributo HTML5 que está depreciado o desaprobado (deprecated) significa que se trata de un atributo que, aunque todavía puede funcionar en algunos navegadores, ya no se recomienda su uso debido a que se considera obsoleto o se ha sustituido por otra tecnología más moderna y efectiva.<br>
+
+            Por mencionar algunos elementos de HTML4 que en se encuentran depreciados en HTML5:<br>
+            <ul>
+                <li>El elemento "center"</li>
+                <li>El atributo "align" de los elementos "div", "h1", "h2", "h3", "h4", "h5", "h6", "p", "table", "img" y otros
+                </li>
+                <li>El atributo "height" del elemento "table"</li>
+                <li>El atributo "width" del elemento "applet"</li>
+            </ul>
+        </p>
+        </details></li>
+
+
+        <li><details>
+        <summary>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</summary>
+        <p>
+            <ol>
+                <li>
+                Mayor soporte multimedia: HTML5 tiene soporte integrado para audio y video, lo que permite reproducir estos tipos de archivos sin necesidad de complementos o plugins de terceros.
+                </li>
+                <li>
+                Nuevos elementos semánticos: HTML5 introduce nuevos elementos semánticos, como "header", "nav", "footer", "article" y "section", que ayudan a describir el contenido de una página de manera más clara y significativa para los motores de búsqueda y para los usuarios.
+                </li>
+                <li>
+                Formularios mejorados: HTML5 introduce nuevas funciones y tipos de entrada de formulario, como validación de campos de entrada, calendarios y selección de fecha, y nuevas opciones para campos de selección.
+                </li>
+                <li>
+                Responsive design: HTML5 tiene características incorporadas que facilitan la creación de diseños responsivos, que se ajustan automáticamente al tamaño de la pantalla del dispositivo utilizado para acceder al sitio.
+                </li>
+                <li>
+                Mejoras de accesibilidad: HTML5 incluye nuevas características que mejoran la accesibilidad para personas con discapacidades, como soporte para etiquetas de encabezado, descripciones de contenido, y una estructura semántica más clara.
+                </li>
+                <li>
+                Mejoras de rendimiento: HTML5 incluye mejoras en la forma en que se cargan los recursos y se gestionan las conexiones, lo que permite una carga más rápida de la página y un mejor rendimiento en general.
+                </li>
+            </ol>
+        </p>
+        </details></li>
+        
+
+        <li><details>
+        <summary>¿Qué componentes de estructura y estilo tiene una tabla?</summary>
+        <p>
+            <ol>
+                <li>&lt;table&gt;: elemento principal que define la tabla.</li>
+                <li>&lt;tr&gt;: fila de la tabla.</li>
+                <li>&lt;th&gt;: celda de encabezado (header cell).</li>
+                <li>&lt;td&gt;: celda de datos (data cell).</li>
+                <li>&lt;caption&gt;: título o leyenda de la tabla.</li>
+                <li>border: atributo para establecer el borde de la tabla.</li>
+                <li>cellspacing: atributo para establecer el espacio entre celdas.</li>
+                <li>cellpadding: atributo para establecer el espacio interno de las celdas.</li>
+                <li>width y height: atributos para establecer el ancho y alto de la tabla.</li>
+            </ol>
+        <p>El estilo de una tabla se puede definir mediante CSS, utilizando selectores para los elementos mencionados anteriormente y propiedades como border, padding, background-color, entre otras.</p></p>
+        </details></li>
+
+
+        <li><details>
+        <summary>¿Cuáles son los principales controles de una forma HTML5?</summary>
+        <p>
+            <ol>
+                <li>Input: permite al usuario introducir datos de diferentes tipos, como texto, números, fechas, etc.</li>
+                <li>Textarea: un área de texto de varias líneas que permite al usuario ingresar texto más largo.</li>
+                <li>Select: proporciona una lista desplegable de opciones para que el usuario seleccione.</li>
+                <li>Checkbox: permite al usuario seleccionar una o varias opciones de una lista.</li>
+                <li>Radio: permite al usuario seleccionar una opción exclusiva de una lista.</li>
+                <li>Button: un botón que se utiliza para enviar el formulario o realizar una acción específica.</li>
+              </ol>
+              
+        </p>
+        </details></li>
+
+
+        <li><details>
+        <summary>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? (Chrome)</summary>
+        <p>
+            Chrome tiene un amplio soporte para HTML5, ya que fue uno de los primeros navegadores en adoptar y promover el estándar. La mayoría de las funciones y características de HTML5 están disponibles en las versiones actuales de Chrome. Sin embargo, es posible que algunas características específicas de HTML5 no sean compatibles con versiones antiguas del navegador o requieran la activación de configuraciones especiales.
+        </p>
+        </details></li>
+        <br><br>
+        
+        <strong>Sobre el ciclo de vida y desarrollo de los sistemas de información:</strong>
+
+        <li><details>
+            <summary>¿Cuál es el ciclo de vida de los sistemas de información?</summary>
+            <p>
+                Aunque existen diferentes metodologías y modelos para el ciclo de vida de los sistemas de información, a continuación se presentan las fases comunes que se pueden encontrar en la mayoría de ellos:<br>
+                <ol>
+                    <li>Planificación: se define el problema a resolver y se establecen los objetivos y requerimientos del sistema.</li>
+                    <li>Análisis: se realiza un estudio detallado de la situación actual y se identifican las necesidades y oportunidades para el nuevo sistema.</li>
+                    <li>Diseño: se define la arquitectura y estructura del sistema, se elabora el diseño detallado de cada componente y se establece el plan de implementación.</li>
+                    <li>Desarrollo: se construye el sistema mediante la codificación y pruebas de los diferentes componentes.</li>
+                    <li>Implementación: se realiza la instalación y puesta en marcha del sistema en el ambiente de producción.</li>
+                    <li>Operación y mantenimiento: se asegura el correcto funcionamiento del sistema y se realizan las tareas de mantenimiento y soporte necesarias para garantizar su continuidad.</li>
+                    <li>Evaluación: se realiza una evaluación del sistema en operación para determinar si cumple con los objetivos y requerimientos establecidos, y se identifican oportunidades de mejora.</li>
+                  </ol>
+                  
+            </p>
+        </details></li>
+
+        <li><details>
+            <summary>¿Cuál es el ciclo de desarrollo de sistemas de información?</summary>
+            <p>
+                El ciclo consta de varias etapas que se realizan en un orden secuencial, y puede variar según la metodología utilizada. A continuación se presentan las etapas comunes del ciclo de desarrollo de sistemas de información:<br>
+                <ol>
+                    <li>Identificación de necesidades: se identifican las necesidades del usuario y se determina la viabilidad del proyecto.</li>
+                    <li>Análisis de requisitos: se recopilan, documentan y validan los requisitos funcionales y no funcionales del sistema.</li>
+                    <li>Diseño del sistema: se diseña la arquitectura y la estructura del sistema, se desarrollan los modelos y se especifican los detalles técnicos.</li>
+                    <li>Implementación: se lleva a cabo la construcción y la integración de los componentes del sistema.</li>
+                    <li>Pruebas: se realizan pruebas para asegurarse de que el sistema cumple con los requisitos y especificaciones.</li>
+                    <li>Despliegue: se instala el sistema en el ambiente de producción y se realiza la migración de datos.</li>
+                    <li>Mantenimiento: se llevan a cabo las actividades necesarias para mantener y mejorar el sistema a lo largo de su vida útil.</li>
+                  </ol>                  
+                    
+            </p>
+        </details></li>
+    
+        
+    </ol>
+
+    <strong>¿Te sirvió esta información?</strong><br><br>
+    <button style="margin-left: 50px;">Si</button>
+    <button>No</button>
+
+    <footer style="margin-top: 220px; margin-left: 950px;">Esta página se hizo con el editor de texto VISUAL STUDIO CODE</footer>
+    
+</body>
+</html>
