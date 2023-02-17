@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <h2>Preguntas de laboratorio</h2>
+
+    <ol>
+        <li><details>
+        <summary>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</summary>
+        <p>Para empezar, Java es un lengiaje de programación orientada a objetos (POO) y Js está basado en prototipos, tambien puede emular la programación orientada a objetos. Otra diferencia JavaScript ha sido un lenguaje interpretado, y Java compilado. Por parte de las semejanzas, Ambos son lenguajes de programación populares utilizados en el desarrollo de aplicaciones web, Ambos lenguajes pueden interactuar con el DOM (Document Object Model) para crear aplicaciones web interactivas.</p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</summary>
+        <p>getFullYear(), getMonth(), getDate(), getDay(), getTime()</p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</summary>
+        <p>push(), pop(), shift(), unshift(), slice()</p>
+        </details></li>
+
+        <li><details>
+        <summary> ¿Cómo se declara una variable con alcance local dentro de una función?</summary>
+        <p> con su tipo de variable y despues la declaración, ejemplo: <br> let x = 6
+        </p>
+        </details></li>
+
+        <li><details>
+        <summary>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</summary>
+        <p> Puedes encontrar muchas razónes para no hacerlo, pero las mas importantes son: Confusión y legibilidad: Si una variable global se utiliza dentro de una función, puede ser difícil entender su origen y su propósito; Y seguridad, en cuánto a las variables es mas seguro siempre tener variables locales.</p>
+        </details></li>
+    </ol>
+
+    <hr>
+
+
+    <h3>Ejercicio 1</h3>
+    <div id="tabla"></div>
+
+    <div id="cuenta">
+        <h3> Ejercicio 6 </h3>
+        <p>Saldo actual: <span id="saldo">1000</span></p>
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto">
+        <button id="depositar">Depositar</button>
+        <button id="retirar">Retirar</button>
+    </div>
+
+
+  
+
+    <script src="js.js"></script>
+</body>
+</html>
