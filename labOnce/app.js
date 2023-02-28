@@ -26,6 +26,11 @@ app.use((request, response, next) => {
         <li>/comida/pizza</li>
         <li>/comida/hamburguesa</li>
     <ul>
+    <br>
+    <hr>
+    <h3> Describe el archivo package.json. </h3>
+    <p>El archivo package.json es un archivo que contiene la información de nuestro proyecto, como por ejemplo el nombre del proyecto, la versión, la descripción, los autores, las dependencias, etc.</p>
+    <br>
     `
     
     response.send(html);
