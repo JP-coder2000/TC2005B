@@ -1,0 +1,32 @@
+{
+  "name": "chilaquiles",
+  "version": "1.0.0",
+  "description": "Ejemplos del curso TC2005B Construcción de software y toma de decisiones, semestre febrero-junio 2023, salón 2003",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ejuarez@bitbucket.org/ejuarez/chilaquiles.git"
+  },
+  "keywords": [
+    "node",
+    "tec",
+    "teus"
+  ],
+  "author": "Eduardo Juárez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/ejuarez/chilaquiles/issues"
+  },
+  "homepage": "https://bitbucket.org/ejuarez/chilaquiles#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
