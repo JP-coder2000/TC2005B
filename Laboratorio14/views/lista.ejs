@@ -1,0 +1,59 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">¡Bienvenid@ al museo virtual!</h1>
+
+<a href="/pinturas/nuevo" class="button is-link is-rounded">Registrar tu obra artística</a>
+
+<br><br>
+
+<% if (pinturas.length > 0) { %>
+    <div class="columns">
+        <% let columns = 0; %>
+        <% for (let pintura of pinturas) { %>
+            <% if (columns % 4 == 0) { %>
+    </div>
+    <div class="columns">
+            <% } %>
+            <% columns++; %>
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="<%= pintura.imagen %>" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="<%= pintura.imagen %>" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4"><%= pintura.autor %></p>
+                                <p class="subtitle is-6">@<%= pintura.nombre %></p>
+                            </div>
+                        </div>
+                    
+                        <div class="content">
+                            <%= pinturas.descripcion %> <a><%= pintura.handle %></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } else { %>
+    <h1>No hay pinturas registradas</h1>
+<% } %>   
+
+<% if (ultimo_pintura != '') { %>
+        <div class="notification is-link is-light">
+            Última pintura: <%= ultimo_pintura%>
+        </div>
+    <% } %>
+
+
+<a href="/pinturas/nuevo" class="button is-link is-rounded">Registrar tu obra artística</a>
+
+<%- include('includes/foot.ejs') %>

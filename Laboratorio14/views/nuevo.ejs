@@ -1,0 +1,20 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Registrar tu pintura</h1>
+
+<form action="/pinturas/nuevo" method="POST">
+
+    <label for="nombre">Nombre obra:</label>
+    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Bauer en la...">
+    <br><br>
+    <label for="raza">Autor:</label>
+    <input name="autor" id="autor" class="input is-rounded" type="text" placeholder="Bauer">
+    <br><br>
+    <label for="descripcion">Fecha:</label>
+    <input name="fecha" id="fecha" class="input is-rounded" type="text" placeholder="00/00/00">
+    <br><br>
+    <input class="button is-rounded is-success" type="submit" value="Registrar">
+
+</form>
+
+<%- include('includes/foot.ejs') %>
