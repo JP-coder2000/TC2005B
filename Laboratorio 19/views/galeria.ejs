@@ -43,3 +43,60 @@
 <a href="/pinturas/agregar" class="button is-link is-rounded"
   >Registrar Nueva Pintura</a
 >
+  <!-- Preguntas y Respuestas -->
+  <br /><br />
+  <section>
+    <h2 class="title">Preguntas frecuentes</h2>
+  
+    <details>
+      <summary>¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</summary>
+      <p>Escribir el código SQL únicamente en la capa del modelo ofrece varias ventajas, como:</p>
+      <ul>
+        <li>Separación de responsabilidades: Mejora la organización del código y facilita su mantenimiento.</li>
+        <li>Reutilización de código: Permite reutilizar consultas y operaciones, evitando duplicación de código.</li>
+        <li>Mayor seguridad: Al centralizar el acceso a la base de datos, se facilita la implementación de medidas de seguridad.</li>
+      </ul>
+    </details>
+  
+    <details>
+      <summary>¿Qué es SQL injection y cómo se puede prevenir?</summary>
+      <p>La inyección SQL es un tipo de ataque en el que un atacante introduce código SQL malicioso a través de campos de entrada de datos en una aplicación web. Para prevenir la inyección SQL, se pueden aplicar medidas como:</p>
+      <ul>
+        <li>Utilizar consultas preparadas (prepared statements) y parámetros en lugar de concatenar texto en consultas SQL.</li>
+        <li>Validar y desinfectar (sanitizar) las entradas de usuario antes de utilizarlas en consultas SQL.</li>
+        <li>Limitar los permisos de la base de datos para minimizar el impacto de un ataque exitoso.</li>
+      </ul>
+    </details>
+  
+    <details>
+      <summary>¿Qué otras formas de autentificación existen?</summary>
+      <p>Además de la autentificación basada en contraseñas, existen otras formas de autentificación, como:</p>
+      <ul>
+        <li>Autenticación de dos factores (2FA): Combina dos métodos de autenticación diferentes, como una contraseña y un código enviado a un dispositivo móvil.</li>
+        <li>Autenticación biométrica: Utiliza características físicas únicas, como huellas dactilares, reconocimiento facial o de voz para autenticar a los usuarios.</li>
+        <li>Autenticación basada en tokens: Genera tokens temporales y únicos que los usuarios deben proporcionar para acceder a un sistema.</li>
+        <li>Autenticación basada en certificados: Emplea certificados digitales emitidos por una autoridad certificadora para autenticar a los usuarios.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>¿En qué consiste el control de acceso basado en roles?</summary>
+      <p>El control de acceso basado en roles (RBAC) es un enfoque de seguridad que asigna roles a los usuarios y define permisos para cada rol. Los usuarios obtienen acceso a recursos y acciones específicas en función de su rol, lo que permite una administración de acceso más granular y simplifica la gestión de permisos.</p>
+    </details>
+    <details>
+      <summary>Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y desventajas de cada uno con respecto al control de acceso.</summary>
+      <p>Sistema con RBAC:</p>
+      <p>Active Directory de Microsoft es un ejemplo de un sistema que aplica RBAC. Permite la administración centralizada de usuarios, grupos y permisos en una red empresarial. Los administradores pueden asignar roles y permisos a usuarios y grupos, lo que simplifica la gestión de acceso a recursos y servicios.</p>
+      <p>Ventajas:</p>
+      <ul>
+        <li>Administración de acceso simplificada y centralizada.</li>
+        <li>Granularidad en el control de permisos.</li>
+        <li>Reducción de la complejidad en la gestión de usuarios y permisos.</li>
+      </ul>
+      <p>Desventajas:</p>
+      <ul>
+        <li>Puede ser complejo de configurar inicialmente.</li>
+        <li>Dependencia de una infraestructura específica (Microsoft).</li>
+      </ul>
+      <p>Sistema sin RBAC:</p>
+      <p>Un ejemplo de un sistema sin RBAC es el sistema de archivos FAT (File Allocation Table) utilizado en algunas memorias USB y tarjetas SD. </p>
+    </details>

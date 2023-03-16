@@ -27,5 +27,12 @@ module.exports = class Usuario {
             WHERE username = ?
         `, [username]);
     }
-
+    static fetchPrivilegios(username) {
+        return db.execute(`
+            SELECT p.nombre
+            FROM usuarios u, usuario_rol ur, roles r, rol_privilegio rp, privilegios p 
+            WHERE u.id = ur.idUsuario AND ur.idRol = r.id AND rp.idRol = r.id 
+                AND rp.idPrivilegio = p.id AND u.username = ?
+        `, [username]);
+    }
 }
