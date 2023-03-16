@@ -1,0 +1,40 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+/>
+
+<h1 class="title">Agregar una Nueva Pintura</h1>
+
+<form action="/pinturas/agregar" method="POST">
+  <label for="nombre">Nombre de la pintura:</label>
+  <input
+    required
+    type="text"
+    name="nombre"
+    id="nombre"
+    class="input is-rounded"
+  />
+  <br /><br />
+  <label for="autor">Autor de la pintura:</label>
+  <input
+    required
+    type="text"
+    name="autor"
+    id="autor"
+    class="input is-rounded"
+  />
+  <br /><br />
+  <label for="imagen">Link de una imagen:</label>
+  <input
+    type="text"
+    name="imagen"
+    id="imagen"
+    class="input is-rounded"
+  />
+  <br /><br />
+  <input
+    type="submit"
+    class="button is-link is-rounded"
+    value="Registrar Pintura"
+  />
+</form>

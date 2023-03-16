@@ -1,0 +1,45 @@
+<!-- Aqui va a ir el header -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+/>
+<h1 class="title">Galeria de Arte</h1>
+<br /><br />
+<% if (mensaje != '') { %>
+<div class="notification"><%= mensaje %></div>
+<% } %> <% if (pinturas.length > 0){%>
+<div class="columns">
+  <% for(let pintura of pinturas) { %>
+  <div class="column">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img
+            src="<%= pintura.imagen %>"
+            alt="Imagen de <%= pintura.nombre %>"
+          />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4"><%= pintura.nombre %></p>
+            <p class="subtitle is-6"><%= pintura.autor %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+<% } else { %>
+<h1>No hay pinturas</h1>
+<% } %> <% if (ultima_pintura != '' || ultima_pintura == null) { %>
+<div class="notification">
+  Ultima pintura agregada: <strong><%= ultima_pintura %></strong>
+</div>
+<% } %>
+
+<a href="/pinturas/agregar" class="button is-link is-rounded"
+  >Registrar Nueva Pintura</a
+>
