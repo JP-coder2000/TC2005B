@@ -40,7 +40,7 @@ exports.post_login = (request, response, next) => {
                         console.log(request.session.privilegios);
 
                         return request.session.save(err => {
-                            response.redirect('/perros');
+                            response.redirect('/agregar');
                         });
                     })
                     .catch((error) => {console.log(error)})
@@ -62,6 +62,7 @@ exports.post_login = (request, response, next) => {
     });
 
 };
+
 
 
 exports.get_signup = (request, response, next) => {

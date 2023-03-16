@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const csrf = require('csurf');
 const isAuth = require('./utils/is-auth');
 const path = require('path');
 
@@ -23,18 +22,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-//CSRF Protection
-const csrfProtection = csrf();
-app.use(csrfProtection); 
-app.use((request, response, next) => {
-    response.locals.csrfToken = request.csrfToken();
-    next();
-});
-
 const usuariosRoutes = require('./routes/usuarios.routes');
 
 app.use('/usuarios', usuariosRoutes);
-
 
 const pinturasRoutes = require('./routes/pinturas.routes');
 

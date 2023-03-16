@@ -6,8 +6,8 @@
 <h1 class="title">Galeria de Arte</h1>
 
 
-<% if (privilegios.indexOf('crear_pintura') >= 0) { %>
-    <a href="/pintura/nuevo" class="button is-link is-rounded">Registrar pintura</a>
+<% if (req.session.user && req.session.user.isAdmin) { %>
+  <a href="/pinturas/agregar" class="button is-link is-rounded">Registrar Nueva Pintura</a>
 <% } %>
 
 <br /><br />
