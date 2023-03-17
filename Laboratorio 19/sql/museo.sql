@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 16-03-2023 a las 16:06:36
+-- Tiempo de generación: 17-03-2023 a las 01:09:48
 -- Versión del servidor: 5.7.34
 -- Versión de PHP: 7.4.21
 
@@ -44,7 +44,9 @@ INSERT INTO `pinturas` (`id`, `nombre`, `autor`, `imagen`) VALUES
 (3, 'La noche estrellada', 'Vincent Van Gogh', 'https://cnnespanol.cnn.com/wp-content/uploads/2019/11/03-most-famous-paintings-starry-night-restricted.jpg'),
 (4, 'El grito', 'Edvard Munch', 'https://cnnespanol.cnn.com/wp-content/uploads/2019/11/04-most-famous-paintings-the-scream-restricted.jpg'),
 (5, 'Guernica', 'Pablo Picasso', 'https://cnnespanol.cnn.com/wp-content/uploads/2019/11/05-most-famous-paintings-guernica.jpg'),
-(14, 'El beso', 'Gustav Klimt', 'https://cnnespanol.cnn.com/wp-content/uploads/2019/11/06-most-famous-paintings-the-kiss-restricted.jpg');
+(14, 'El beso', 'Gustav Klimt', 'https://cnnespanol.cnn.com/wp-content/uploads/2019/11/06-most-famous-paintings-the-kiss-restricted.jpg'),
+(15, 'JuanPablo', 'l', 'l'),
+(16, 'Ultra', 'yo', 'yo');
 
 -- --------------------------------------------------------
 
@@ -63,7 +65,7 @@ CREATE TABLE `privilegios` (
 --
 
 INSERT INTO `privilegios` (`id`, `nombre`, `created_at`) VALUES
-(3, 'Admin', '2023-03-16 15:34:02'),
+(3, 'crear_pintura', '2023-03-16 15:34:02'),
 (4, 'Worker', '2023-03-16 15:34:02');
 
 -- --------------------------------------------------------
@@ -84,8 +86,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `nombre`, `descripcion`, `created_at`) VALUES
-(3, 'Juanpablo', 'Admin', '2023-03-16 15:33:11'),
-(4, 'Santiago', 'Worker', '2023-03-16 15:33:11');
+(3, 'Admin', NULL, '2023-03-16 15:33:11'),
+(4, 'Santiago', 'Influencer', '2023-03-16 15:33:11');
 
 -- --------------------------------------------------------
 
@@ -200,7 +202,7 @@ ALTER TABLE `usuario_rol`
 -- AUTO_INCREMENT de la tabla `pinturas`
 --
 ALTER TABLE `pinturas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `privilegios`
