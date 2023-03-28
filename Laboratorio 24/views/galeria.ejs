@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Pinturas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+</head>
+
+<body>
+  <h1>Galería de Pinturas</h1>
+  <input type="text" id="buscar" placeholder="Buscar pintura">
+
+  <div id="resultados_busqueda">
+    <div id="pinturas_originales" class="columns">
+      <% pinturas.forEach(pintura=> { %>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="<%= pintura.imagen %>" alt="<%= pintura.nombre %>">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">
+                    <%= pintura.nombre %>
+                  </p>
+                  <p class="subtitle is-6">
+                    <%= pintura.autor %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("buscar").onkeyup = () => {
+      const valor_busqueda = document.getElementById("buscar").value;
+      const pinturasOriginales = document.getElementById("pinturas_originales");
+
+      fetch('/pinturas/buscar/' + valor_busqueda, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }).then(result => {
+        return result.json();
+      }).then(data => {
+        pinturasOriginales.innerHTML = ""; // Limpiar el contenedor de pinturas originales
+
+        if (data.pintura.length > 0) {
+          for (let pintura of data.pintura) {
+            let column = document.createElement("div");
+            column.className = "column";
+
+            let card = document.createElement("div");
+            card.className = "card";
+
+            let cardImage = document.createElement("div");
+            cardImage.className = "card-image";
+            let figure = document.createElement("figure");
+            figure.className = "image is-4by3";
+            let img = document.createElement("img");
+            img.src = pintura.imagen;
+            img.alt = pintura.nombre;
+            figure.appendChild(img);
+            cardImage.appendChild(figure);
+
+            let cardContent = document.createElement("div");
+            cardContent.className = "card-content";
+            let media = document.createElement("div");
+            media.className = "media";
+            let mediaContent = document.createElement("div");
+            mediaContent.className = "media-content";
+            let title = document.createElement("p");
+            title.className = "title is-4";
+            title.innerText = pintura.nombre;
+            let subtitle = document.createElement("p");
+            subtitle.className = "subtitle is-6";
+            subtitle.innerText = pintura.autor;
+            mediaContent.appendChild(title);
+            mediaContent.appendChild(subtitle);
+            media.appendChild(mediaContent);
+            cardContent.appendChild(media);
+
+            card.appendChild(cardImage);
+            card.appendChild(cardContent);
+
+            column.appendChild(card);
+            pinturasOriginales.appendChild(column);
+          }
+        } else {
+          pinturasOriginales.innerHTML = "<p>No se encontraron pinturas que coincidan con la búsqueda.</p>";
+        }
+      });
+            };
+          </script>
+          <div>
+            <h3>Preguntas de Laboratorio: </h3>
+            <p>
+              ¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?
+              <br>
+              AJAX (Asynchronous JavaScript and XML) es una tecnología clave en el desarrollo de RIA's ya que permite a las
+              aplicaciones web actualizar la información en la página sin necesidad de recargarla por completo, lo que proporciona una
+              experiencia de usuario más fluida y rápida. Además, AJAX permite enviar y recibir datos de forma asíncrona, lo que
+              significa que los usuarios pueden interactuar con la aplicación mientras los datos se cargan en segundo plano.
+              <br>
+
+              ¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o
+              del lado del servidor?
+              <br>
+              Sin embargo, el uso de AJAX también puede presentar implicaciones de seguridad en las aplicaciones web. Debido a que las
+              solicitudes se realizan de forma asíncrona, los usuarios malintencionados pueden explotar esta característica para
+              enviar solicitudes maliciosas sin que el usuario lo sepa. Para mitigar estos riesgos, es importante validar los datos de
+              entrada tanto del lado del cliente como del lado del servidor. El lado del cliente es útil para proporcionar una
+              respuesta rápida al usuario, pero el lado del servidor es fundamental para garantizar la seguridad de la aplicación.
+              <br>
+              ¿Qué es JSON?
+              <br>
+              JSON (JavaScript Object Notation) es un formato de intercambio de datos ligero y de fácil lectura que se utiliza para
+              transmitir datos entre aplicaciones web. Es un formato de texto simple que se basa en un conjunto de pares clave-valor,
+              lo que lo hace fácil de entender y de analizar para las aplicaciones. JSON es ampliamente utilizado en la programación
+              web y en los servicios web debido a su simplicidad y facilidad de uso.
+
+            </p>
+          </div>
+</body>
+
+</html>
